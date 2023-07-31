@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build --parallel",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "native": "cd apps/native && expo start -c",
+    "studio": " cd packages/db && yarn prisma:studio",
+    "generate": "cd packages/db && yarn prisma generate",
+    "sync": "manypkg check"
+  },
+  "name": "offload",
+  "packageManager": "yarn@1.22.19",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@manypkg/cli": "^0.21.0",
+    "@turbo/gen": "^1.9.7",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  }
+}

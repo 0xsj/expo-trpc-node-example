@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "CommonJS",
+    "outDir": "build",
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "extends": "../../tsconfig.json",
+  "include": ["src", "index.ts", "transformer.ts", "src/utils"]
+}
